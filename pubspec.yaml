@@ -25,7 +25,7 @@ dependencies:
   # assets_audio_player_web: ^3.0.0-nullsafety.0
   assets_audio_player_web:
     git:
-      url: https://github.com/galacticdigital/assets_audio_player_web-3.1.1.git
+      url: https://github.com/galacticdigital/assets_audio_player_web.git
       ref: main
       publish_to: none
 
