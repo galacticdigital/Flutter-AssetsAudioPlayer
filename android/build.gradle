@@ -44,12 +44,21 @@ android {
     packagingOptions {
         exclude "DebugProbesKt.bin"
     }
+    
+    // Configure the JVM toolchain
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        // Use the toolchain to specify the exact JVM version for both Kotlin and Java
+        java {
+            toolchain {
+                languageVersion.set(JavaLanguageVersion.of(17))
+            }
+        }
     }
+    
     kotlinOptions {
-        jvmTarget = '1.8'  // Ensure Kotlin also targets JVM 1.8
+        jvmTarget = '17' // Ensure Kotlin also targets JVM 17
     }
 }
 
