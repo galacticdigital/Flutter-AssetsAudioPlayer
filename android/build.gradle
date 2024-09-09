@@ -47,18 +47,18 @@ android {
     
     // Configure the JVM toolchain
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
         // Use the toolchain to specify the exact JVM version for both Kotlin and Java
         java {
             toolchain {
-                languageVersion.set(JavaLanguageVersion.of(17))
+                languageVersion.set(JavaLanguageVersion.of(18))
             }
         }
     }
     
     kotlinOptions {
-        jvmTarget = '17' // Ensure Kotlin also targets JVM 17
+        jvmTarget = '18' // Ensure Kotlin also targets JVM 17
     }
 }
 
